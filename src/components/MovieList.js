@@ -12,7 +12,9 @@ function MovieList({movie,inputSearch,rating}) {
       )
       .map((el)=>(
       <MovieCard movie={el} key={el.id}/>
+  
       ))}
+
  </div>
   );
 }
