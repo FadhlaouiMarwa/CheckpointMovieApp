@@ -24,7 +24,7 @@ function AddNewMovie({add}) {
   const handleShow = () => setShow(true);
   return (
     <div>
-      <div style={{display:"flex",justifyContent:"center"}}>
+      <div style={{display:"flex",justifyContent:"center",padding:20}}>
       <Button  variant="primary" onClick={handleShow}>
        Add New Movie
       </Button>
@@ -38,19 +38,19 @@ function AddNewMovie({add}) {
             <div>
             <div>
             <label>Title</label>
-            <input type="text" placeholder='Enter the title here' onChange={(e)=>setTitle(e.target.value)}/>
+            <Input type="text" placeholder='Enter the title here' onChange={(e)=>setTitle(e.target.value)}/>
             </div>
             <div>
             <label>Description</label>
-            <input type="text" placeholder='Enter description here' onChange={(e)=>setDescription(e.target.value)}/>
+            <Input type="text" placeholder='Enter description here' onChange={(e)=>setDescription(e.target.value)}/>
             </div>
             <div>
             <label>Rate</label>
-            <input type="text" placeholder='Enter the rate here' onChange={(e)=>setrate(e.target.value)}/>
+            <Input type="text" placeholder='Enter the rate here' onChange={(e)=>setrate(e.target.value)}/>
             </div>
             <div>
             <label>PosterUrl</label>
-            <input type="text" placeholder='Enter the PosterUrl here' onChange={(e)=>setPosterUrl(e.target.value)}/>
+            <Input type="text" placeholder='Enter the PosterUrl here' onChange={(e)=>setPosterUrl(e.target.value)}/>
             </div>
             </div>
         </Modal.Body>

@@ -11,7 +11,7 @@ function MovieCard({movie}) {
     <Card.Title style={{display:"flex",justifyContent:"center"}}>{movie.title}</Card.Title>
     <Card.Text style={{display:"flex",justifyContent:"center",fontFamily:"fantasy"}}>{movie.rate}</Card.Text>
     <div style={{display:"flex",justifyContent:"center"}}>
-    <Button onClick={()=>navigate(`/MovieList/Specs/${movie.title}`)} variant="primary">Choose this movie</Button>    </div>
+    <Button onClick={()=>navigate(`/MovieList/Specs/${movie.description}`)} variant="primary">Choose this movie</Button>    </div>
   </Card.Body>
 </Card>
 

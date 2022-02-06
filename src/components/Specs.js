@@ -6,16 +6,20 @@ import { moviesData } from '../constant/data';
 function Specs() {
     const navigate=useNavigate()
     const params=useParams()
-    const film=moviesData.find(el=>el.title===params.title)
+    const film=moviesData.find(el=>el.description===params.description)
 
-  return  <div>
+  return  <div >
+    <div style={{ justifyContent:"center",display:"flex",padding:50}}>
+      <Button style={{width:200,height:50, justifyContent:"center"}}  onClick={()=>navigate(-1)}>List of Movies</Button>
+    </div>
+  <div >
   <Container>
-  <Row>
-    <Col sm={8}><h2>Description's movie:{film.description}</h2></Col>
-    <Col sm={4} ><h2>Trailer's movie:{film.trailer}</h2></Col>
+  <Row style={{display:"flex",justifyContent:"space-between"}}>
+    <Col  style={{width:400,height:200}} sm={8}><h2>{film.title}:<div style={{fontFamily:"initial",fontSize:25}}>{film.description }</div></h2></Col>
+    <iframe style={{width:500,height:300}} src={film.trailer}></iframe>
   </Row>
   </Container>
-  <Button onClick={()=>navigate(-1)}>My List</Button>
+  </div>
 
   </div>
   
